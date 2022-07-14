@@ -68,7 +68,7 @@ public class Television extends Electrodomestico{
 			precio += 50;
 		}
 		
-		return 0;
+		return precio;
 	}
 
 	public double getPulgadas() {
