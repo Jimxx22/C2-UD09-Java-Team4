@@ -8,7 +8,7 @@ public class MainApp {
 		
 		System.out.println(libro1);
 		System.out.println(libro2);
-		if(libro1.getPaginas()>libro2.getPaginas) {
+		if(libro1.getPaginas()>libro2.getPaginas()) {
 			System.out.println("El libro con max paginas es "+libro1.getPaginas());
 		} else {
 			System.out.println("El libro con max paginas es "+libro2.getPaginas());
