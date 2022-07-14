@@ -1,5 +1,5 @@
 
-public class Videojuego {
+public class Videojuego implements Entregable{
 
 	private String titulo;
 	private int horasEstimadas;
@@ -59,5 +59,35 @@ public class Videojuego {
 	public String toString() {
 		return "Videojuego [titulo=" + titulo + ", horasEstimadas=" + horasEstimadas + ", entregado=" + entregado
 				+ ", genero=" + genero + ", compania=" + compania + "]";
+	}
+
+	@Override
+	public void entregar() {
+		this.entregado=true;
+		
+	}
+
+	@Override
+	public void devolver() {
+		this.entregado=false;
+		
+	}
+
+	@Override
+	public boolean isEntregado() {
+		
+		return entregado;
+	}
+
+	@Override
+	public boolean compareTo(Object a) {
+		
+		Videojuego videojuego = (Videojuego) a;
+		
+		if(videojuego.getHorasEstimadas()==horasEstimadas) {
+			return true;
+		}else {
+			return false;
+		}
 	}
 }
