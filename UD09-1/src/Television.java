@@ -25,10 +25,11 @@ public class Television extends Electrodomestico{
 		this.sintonizador = sintonizador;
 	}
 
-	@Override
+	
 	public double precioFinal() {
 		
-		switch (consumo) {
+		precio = super.precioFinal();
+		/*switch (consumo) {
 		case 'A':
 			precio += 100;
 			break;
@@ -57,7 +58,7 @@ public class Television extends Electrodomestico{
 			precio += 50;
 		} else {
 			precio += 10;
-		}
+		}*/
 		
 		if(pulgadas > 40) {
 			precio *= 1.3;
