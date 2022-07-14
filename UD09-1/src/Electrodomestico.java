@@ -1,5 +1,5 @@
 
-public abstract class Electrodomestico {
+public class Electrodomestico {
 	
 	protected double precio;
 	protected String color;
@@ -77,7 +77,43 @@ public abstract class Electrodomestico {
 		return valido;
 	}
 	
-	public abstract double precioFinal();
+	public double precioFinal() {
+	
+		switch (consumo) {
+		case 'A':
+			precio+=100;
+			break;
+		case 'B':
+			precio+=80;
+			break;
+		case 'C':
+			precio+=60;
+			break;
+		case 'D':
+			precio+=50;
+			break;
+		case 'E':
+			precio+=30;
+			break;
+		case 'F':
+			precio+=10;
+			break;
+		default:
+			break;
+		}
+		
+		if(peso<=19) {
+			precio+=10;
+		}else if(peso<=49) {
+			precio+=50;
+		}else if(peso<=79) {
+			precio+=80;
+		}else {
+			precio+=100;
+		}
+		
+		return precio;
+	}
 	
 	
 }
