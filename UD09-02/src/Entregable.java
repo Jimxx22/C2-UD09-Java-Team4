@@ -7,6 +7,6 @@ public interface Entregable {
 	
 	public boolean isEntregado();
 	
-	public boolean compareTo(Object a);
+	public int compareTo(Object a);
 
 }

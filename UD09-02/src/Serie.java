@@ -89,13 +89,15 @@ public class Serie implements Entregable{
 	}
 
 	@Override
-	public boolean compareTo(Object a) {
+	public int compareTo(Object a) {
 		// TODO Auto-generated method stub
 		Serie s1 = (Serie) a;
 		if (s1.getSeason() == season) {
-			return true;
-		}else {
-			return false;
+			return 0;
+		}else if (s1.getSeason() < season){
+			return 1;
+		} else {
+			return -1;
 		}
 		
 	}
