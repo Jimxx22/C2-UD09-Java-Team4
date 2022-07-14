@@ -78,6 +78,7 @@ public class Electrodomestico {
 	}
 	
 	public double precioFinal() {
+<<<<<<< HEAD
 	
 		switch (consumo) {
 		case 'A':
@@ -110,6 +111,37 @@ public class Electrodomestico {
 			precio+=80;
 		}else {
 			precio+=100;
+=======
+		switch (consumo) {
+		case 'A':
+			precio += 100;
+			break;
+		case 'B':
+			precio += 80;
+			break;
+		case 'C':
+			precio += 60;
+			break;
+		case 'D':
+			precio += 50;
+			break;
+		case 'E':
+			precio += 30;
+			break;
+		case 'F':
+			precio += 10;
+			break;
+		}
+		
+		if(peso > 80) {
+			precio += 100;
+		} else if (peso >= 50) {
+			precio += 80;
+		} else if (peso >= 20) {
+			precio += 50;
+		} else {
+			precio += 10;
+>>>>>>> refs/remotes/origin/David
 		}
 		
 		return precio;
