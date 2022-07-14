@@ -1,12 +1,12 @@
 
 public interface Entregable {
 	
-	void entregar();
+	public void entregar();
 	
-	void devolver();
+	public void devolver();
 	
-	boolean isEntregado();
+	public boolean isEntregado();
 	
-	boolean compareTo(Object a);
+	public boolean compareTo(Object a);
 
 }
