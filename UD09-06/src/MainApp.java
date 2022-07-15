@@ -2,26 +2,57 @@
 
 public class MainApp {
 	
+	// Si queremos que cree nuevos espectadores solo tendremos que cambiar el valor de esta constante
 	final static int NUM_ESPECTADORES = 30;
-
+	static int numEspectadores = 0;
+	static Cine cine; 
+	
 	public static void main(String[] args) {
 		
+		// Declaramos la película usando el generador aleatorio de nombres para el director
 		Pelicula pelicula = new Pelicula("Avatar 2",200,16,generarNombre()+" "+generarNombre());
-		Cine cine = new Cine(pelicula, 8);
-		int numEspectadores = 0;
-		 
+		// construimos el cine con la pelicula atreiormente creada y el precio de la entrada
+		cine = new Cine(pelicula, 8);		
+		
+		// Llamamos la función de generación y validación de los espectadores y los colocamos en un asiento
+		genracionEspectadores();	
+		
+		//mostramos todos los asientos del cine i su informacion
+		for(int i = 0; i < cine.getAsientos().length; i++) {
+			for (int j = 0; j < cine.getAsientos()[0].length; j++) {
+				System.out.println(cine.getAsientos()[i][j].toString());
+			}
+		}
+		
+		// Mostramos la película que se va a proyectar
+		System.out.println("\nPelicula: "+pelicula.toString());
+		
+		// Mostramos quantos espectadores han entrado 
+		System.out.println("Numero de espectadores: "+numEspectadores);
+
+	}
+	
+	public static void genracionEspectadores() {
+		
+		// Generamos los espectadores
 		for (int i = 0; i < NUM_ESPECTADORES; i++) {
 			String nombre = generarNombre()+" "+generarNombre();
 			int edad = generarEdad();
 			double dinero = generarDinero();
 			Espectador espectador = new Espectador(nombre, edad, dinero);
-			//System.out.println(espectador);
+			
+			// Llamamos el método compareTo de la clase Cine para saber si el espectador cumple los requisitos para ver la película,
+			// si no es así nos saltamos todo lo que queda del bucle for.
 			if(!cine.compareTo(espectador)) {
 				continue;
 			} 
+			
+			// Sumamos el número de espectadores que van a ver la película
 			numEspectadores++;
 			
 			boolean sentado = false;
+			
+			// Le asignamos un asiento libre al espectador que cumple los requisitos 
 			while(!sentado) {
 				int fila,columna;
 				fila = (int)(Math.random()*8);
@@ -33,17 +64,9 @@ public class MainApp {
 				}
 			}
 		}
-		
-		for(int i = 0; i < cine.getAsientos().length; i++) {
-			for (int j = 0; j < cine.getAsientos()[0].length; j++) {
-				System.out.println(cine.getAsientos()[i][j].toString());
-			}
-		}
-		System.out.println("Pelicula: "+pelicula.toString());
-		System.out.println("Numero de espectadores: "+numEspectadores);
-
-	}
+	}	
 	
+	// Generador de nombre aleatorios sin sentido
 	private static String generarNombre() {
 		String nombre = "";
 		int longitudNombre, vocal;
@@ -80,12 +103,14 @@ public class MainApp {
 		return nombre;
 	}
 	
+	// Generador de edades aleatorias de 0 a 100
 	private static int generarEdad() {
 		int edad;
 		edad = (int)(Math.random()*100);
 		return edad;
 	}
 	
+	// Generador de dinero aleatorio de 0 a 50
 	private static double generarDinero() {
 		double dinero;
 		dinero = Math.random()*50;
