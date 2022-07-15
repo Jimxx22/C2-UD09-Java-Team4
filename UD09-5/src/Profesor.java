@@ -8,7 +8,7 @@ public class Profesor extends Persona{
 		this.materia = "";
 	}
 
-	public Profesor(String nombre, int edad, char sexo, boolean asistencia, String materia) {
+	public Profesor(String nombre, int edad, char sexo, String materia) {
 		super(nombre, edad, sexo, true);
 		if (validarMateria(materia)) {
 			this.materia = materia;
