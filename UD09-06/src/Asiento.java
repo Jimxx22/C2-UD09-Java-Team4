@@ -55,7 +55,7 @@ public class Asiento {
 
 	@Override
 	public String toString() {
-		return "Asiento [numero=" + numero + ", letra=" + letra + ", ocupado=" + ocupado + "]";
+		return "Asiento [numero=" + numero + ", letra=" + letra + ", ocupado=" + ocupado + ", espectador="+ verInfoEspectador() +"]";
 	}
 	
 		
