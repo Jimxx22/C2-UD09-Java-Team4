@@ -2,6 +2,7 @@
 public class Estudiante extends Persona{
 	
 	private double calificacion;
+	private boolean aprovado;
 	
 	public Estudiante(String nombre, int edad, char sexo, double calificacion) {
 		super(nombre, edad, sexo, true);
@@ -21,4 +22,16 @@ public class Estudiante extends Persona{
 		return calificacion;
 	}
 
+	public boolean isAprovado() {
+		if(calificacion>=5) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+
+	@Override
+	public String toString() {
+		return "\nEstudiante ["+super.toString()+"calificacion=" + calificacion + "]";
+	}
 }
