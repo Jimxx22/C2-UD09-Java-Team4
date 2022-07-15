@@ -49,6 +49,11 @@ public abstract class Persona {
 		this.asistencia = asistencia;
 	}
 	
+	@Override
+	public String toString() {
+		return "Persona [nombre=" + nombre + ", edad=" + edad + ", sexo=" + sexo + ", asistencia=" + asistencia + "]";
+	}
+
 	public abstract void novillos();
 	
 }

@@ -21,4 +21,8 @@ public class Estudiante extends Persona{
 		return calificacion;
 	}
 
+	@Override
+	public String toString() {
+		return "Estudiante ["+super.toString()+"calificacion=" + calificacion + "]";
+	}
 }
