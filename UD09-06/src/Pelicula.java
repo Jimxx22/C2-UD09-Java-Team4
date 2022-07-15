@@ -1,11 +1,13 @@
 
 public class Pelicula {
 	
+	// Variables
 	private String titulo;
 	private int duracion;
 	private int edadMinima;
 	private String director;
 	
+	// Constructor por defecto
 	public Pelicula() {
 		titulo = "";
 		duracion = 0;
@@ -13,6 +15,7 @@ public class Pelicula {
 		director = "";
 	}
 	
+	// Constructor con todos los parámetros
 	public Pelicula(String titulo, int duracion, int edadMinima, String director) {
 		this.titulo = titulo;
 		this.duracion = duracion;
@@ -20,6 +23,7 @@ public class Pelicula {
 		this.director = director;
 	}
 
+	// Geters y steres
 	public String getTitulo() {
 		return titulo;
 	}
@@ -52,6 +56,7 @@ public class Pelicula {
 		this.director = director;
 	}
 
+	// Método toString para mostrar la información de la película
 	@Override
 	public String toString() {
 		return "Pelicula [titulo=" + titulo + ", duracion=" + duracion + ", edadMinima=" + edadMinima + ", director="
