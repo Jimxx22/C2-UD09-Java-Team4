@@ -1,16 +1,19 @@
 
 public class Cine {
 	
+	private static final int MAX_FILA = 8;
+	private static final int MAX_COLUMNA = 9;
+	
 	private Pelicula peli;
 	private double precio;
-	private Asiento[][] asientos;
+	private Asiento[][] asientos = new Asiento[MAX_FILA][MAX_COLUMNA];
 	
 	public Cine() {
 		this.peli = new Pelicula();
 		this.precio = 0.0;
-		for (int i = 1; i <= 8; i++) {
-			for (int j = 1; j <= 9 ; j++) {
-				this.asientos [i][j] = new Asiento(i,(char)(64 + j));
+		for (int i = 0; i < asientos.length; i++) {
+			for (int j = 0; j < asientos[0].length ; j++) {
+				this.asientos [i][j] = new Asiento(i+1,(char)(65 + j));
 			}
 		}
 	}
@@ -18,9 +21,9 @@ public class Cine {
 	public Cine(Pelicula peli, double precio) {
 		this.peli = peli;
 		this.precio = precio;
-		for (int i = 1; i <= 8; i++) {
-			for (int j = 1; j <= 9 ; j++) {
-				this.asientos [i][j] = new Asiento(i,(char)(64 + j));
+		for (int i = 0; i < asientos.length; i++) {
+			for (int j = 0; j < asientos[0].length ; j++) {
+				this.asientos [i][j] = new Asiento(i+1,(char)(65 + j));
 			}
 		}
 	}

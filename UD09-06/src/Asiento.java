@@ -55,7 +55,11 @@ public class Asiento {
 
 	@Override
 	public String toString() {
-		return "Asiento [numero=" + numero + ", letra=" + letra + ", ocupado=" + ocupado + ", espectador="+ verInfoEspectador() +"]";
+		if(espectador == null) {
+			return "Asiento [fila=" + numero + ", letra=" + letra + ", ocupado=" + ocupado + ", espectador= null]";
+		} else {
+			return "Asiento [fila=" + numero + ", letra=" + letra + ", ocupado=" + ocupado + ", espectador="+ verInfoEspectador() +"]";
+		}
 	}
 	
 		
