@@ -29,11 +29,11 @@ public class Raices {
 		double resultado1, resultado2;
 		
 		if(tieneRaiz()) {
-			obtenerRaiz();
+			//obtenerRaiz();
 			/*resultado1 = -b;
 			System.out.println("Solucion: "+resultado1);*/
 		} else if (tieneRaices()) {
-			obtenerRaices();
+			//obtenerRaices();
 			/*resultado1 = -b+Math.sqrt(getDiscriminante()/(2*a));
 			resultado2 = -b-Math.sqrt(getDiscriminante()/(2*a));
 			System.out.println("Solucion 1: "+resultado1);
