@@ -7,15 +7,14 @@ public abstract class Persona {
 	protected boolean asistencia;
 		
 	public Persona() {
-		this("",0,'H');
-		this.asistencia=true;
+		this("",0,'H',false);
 	}
 
-	public Persona(String nombre, int edad, char sexo) {
+	public Persona(String nombre, int edad, char sexo, boolean asistencia) {
 		this.nombre = nombre;
 		this.edad = edad;
 		this.sexo = sexo;
-		this.asistencia=true;
+		this.asistencia = asistencia;
 	}
 
 	public String getNombre() {
