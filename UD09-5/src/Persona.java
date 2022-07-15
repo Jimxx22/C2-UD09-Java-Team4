@@ -49,6 +49,6 @@ public abstract class Persona {
 		this.asistencia = asistencia;
 	}
 	
-	public abstract boolean novillos();
+	public abstract void novillos();
 	
 }
