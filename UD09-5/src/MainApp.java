@@ -83,9 +83,9 @@ public class MainApp {
 	}
 	
 	private static double generarCalificacion() {
-		double dinero;
-		dinero = Math.random()*10;
-		return dinero;
+		double nota;
+		nota = Math.random()*10;
+		return nota;
 	}
 
 }
