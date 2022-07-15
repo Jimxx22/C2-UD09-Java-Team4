@@ -41,6 +41,14 @@ public class Cine {
 		this.precio = precio;
 	}
 	
+	public Asiento[][] getAsientos() {
+		return asientos;
+	}
+
+	public void setAsientos(Asiento[][] asientos) {
+		this.asientos = asientos;
+	}
+
 	public boolean compareTo (Object a) {
 		Espectador e1 = (Espectador) a;
 		if (e1.getDinero() >= precio && e1.getEdad() >= peli.getEdadMinima()) {

@@ -5,13 +5,14 @@ public class MainApp {
 
 	public static void main(String[] args) {
 		
-		Cine cine = new Cine();
+		Pelicula pelicula = new Pelicula("Avatar 2",200,16,"David Marcos");
+		Cine cine = new Cine(pelicula, 20);
 		 
 		for (int i = 0; i < NUM_ESPECTADORES; i++) {
-			String nombre;
-			int edad;
-			double dinero;
-			Espectador espectador = new Espectador();
+			String nombre = generarNombre();
+			int edad = generarEdad();
+			double dinero = generarDinero();
+			Espectador espectador = new Espectador(nombre, edad, dinero);
 		}
 
 	}
