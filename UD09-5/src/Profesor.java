@@ -33,6 +33,19 @@ public class Profesor extends Persona{
 		return valido;
 	}
 
+	public String getMateria() {
+		return materia;
+	}
+
+	public void setMateria(String materia) {
+		this.materia = materia;
+	}
+
+	@Override
+	public String toString() {
+		return "Profesor ["+super.toString()+"materia=" + materia + "]";
+	}
+
 	@Override
 	public void novillos() {
 		// TODO Auto-generated method stub
