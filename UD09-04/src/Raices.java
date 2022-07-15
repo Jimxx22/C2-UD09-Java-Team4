@@ -9,6 +9,20 @@ public class Raices {
 		this.c = c;
 	}
 	
+	public double getDiscriminante() {
+		Double res;
+		
+		res=(Math.pow(b, 2))-4*a*c;
+		
+		return res;
+	}
 	
-
+	public boolean tieneRaices() {
+		
+		if(getDiscriminante()>=0) {
+			return true;
+		}else {
+			return false;
+		}
+	}
 }
