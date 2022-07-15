@@ -13,6 +13,20 @@ public class MainApp {
 			int edad = generarEdad();
 			double dinero = generarDinero();
 			Espectador espectador = new Espectador(nombre, edad, dinero);
+			if(!cine.compareTo(espectador)) {
+				continue;
+			}
+			boolean sentado = false;
+			while(!sentado) {
+				int fila,columna;
+				fila = (int)Math.random()*8+1;
+				columna = (int)Math.random()*9+1;
+				if(!cine.getAsientos()[fila][columna].isOcupado()) {
+					sentado = true;
+					cine.getAsientos()[fila][columna].setEspectador(espectador);
+					cine.getAsientos()[fila][columna].ocupado();
+				}
+			}
 		}
 
 	}
