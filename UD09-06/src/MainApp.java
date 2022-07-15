@@ -6,7 +6,7 @@ public class MainApp {
 
 	public static void main(String[] args) {
 		
-		Pelicula pelicula = new Pelicula("Avatar 2",200,16,"David Marcos");
+		Pelicula pelicula = new Pelicula("Avatar 2",200,16,generarNombre()+" "+generarNombre());
 		Cine cine = new Cine(pelicula, 8);
 		int numEspectadores = 0;
 		 
@@ -39,6 +39,7 @@ public class MainApp {
 				System.out.println(cine.getAsientos()[i][j].toString());
 			}
 		}
+		System.out.println("Pelicula: "+pelicula.toString());
 		System.out.println("Numero de espectadores: "+numEspectadores);
 
 	}
