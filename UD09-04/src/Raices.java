@@ -1,6 +1,6 @@
 
 public class Raices {
-	Double a, b, c;
+	private Double a, b, c;
 
 	public Raices(Double a, Double b, Double c) {
 		super();
@@ -9,7 +9,7 @@ public class Raices {
 		this.c = c;
 	}
 	
-	public boolean tieneRaiz() {
+	private boolean tieneRaiz() {
 		if(getDiscriminante() == 0) {
 			return true;
 		} else {
@@ -17,7 +17,7 @@ public class Raices {
 		}
 	}
 		
-	public double getDiscriminante() {
+	private double getDiscriminante() {
 		Double res;
 		
 		res=(Math.pow(b, 2))-4*a*c;
@@ -33,7 +33,7 @@ public class Raices {
 		}
 	}
 
-	public boolean tieneRaices() {
+	private boolean tieneRaices() {
 		
 		if(getDiscriminante()>=0) {
 			return true;
