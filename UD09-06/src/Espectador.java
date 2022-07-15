@@ -1,9 +1,9 @@
 
 public class Espectador {
 	
-	String nombre;
-	int edad;
-	Double dinero;
+	private String nombre;
+	private int edad;
+	private Double dinero;
 	
 	
 	
