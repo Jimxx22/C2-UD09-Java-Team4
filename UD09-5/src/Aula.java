@@ -2,17 +2,19 @@ import java.util.Arrays;
 
 public class Aula {
 	
-	Profesor profesor;
-	int maxEstudinates;
-	Estudiante[] estudiantes=new Estudiante[maxEstudinates]; 
-	String materia;
+	private int id;
+	private Profesor profesor;
+	private int maxEstudinates;
+	private Estudiante[] estudiantes=new Estudiante[maxEstudinates]; 
+	private String materia;
 	
 	public Aula() {
-		this(null,1,null,"");
+		this(0,null,1,null,"");
 	}
 	
-	public Aula(Profesor profesor, int maxEstudinates, Estudiante[] estudiantes, String materia) {
+	public Aula(int id, Profesor profesor, int maxEstudinates, Estudiante[] estudiantes, String materia) {
 		super();
+		this.id=id;
 		this.profesor = profesor;
 		this.maxEstudinates = maxEstudinates;
 		this.estudiantes = estudiantes;
@@ -54,10 +56,41 @@ public class Aula {
 	public void setMateria(String materia) {
 		this.materia = materia;
 	}
+	
+	public boolean sePuedeDarClasse() {
+		int j=0;
+		for (int i = 0; i < estudiantes.length; i++) {
+			Estudiante estudiante = estudiantes[i];
+			if(estudiante.isAsistencia()) {
+				j++;
+			}
+		}
+		
+		if (profesor.getMateria().equalsIgnoreCase(getMateria()) && profesor.isAsistencia() && j>(maxEstudinates/2)) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public String contarSexo() {
+		
+		int m=0,h=0;
+		
+		for (int i = 0; i < estudiantes.length; i++) {
+			if(estudiantes[i].getSexo()=='H' && estudiantes[i].isAprovado()) {
+				h++;
+			}else if(estudiantes[i].getSexo()=='M' && estudiantes[i].isAprovado()){
+				m++;
+			}
+		}
+		
+		return "Hombres aprovados: "+h+", mujeres aprovadas: "+m;
+	}
 
 	@Override
 	public String toString() {
-		return "Aula [profesor=" + profesor + ", maxEstudinates=" + maxEstudinates + ", estudiantes="
+		return "Aula [id="+id+" profesor=" + profesor + ", maxEstudinates=" + maxEstudinates + ", estudiantes="
 				+ Arrays.toString(estudiantes) + ", materia=" + materia + "]";
 	}
 	
