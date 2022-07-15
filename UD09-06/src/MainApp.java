@@ -11,7 +11,7 @@ public class MainApp {
 		int numEspectadores = 0;
 		 
 		for (int i = 0; i < NUM_ESPECTADORES; i++) {
-			String nombre = generarNombre();
+			String nombre = generarNombre()+" "+generarNombre();
 			int edad = generarEdad();
 			double dinero = generarDinero();
 			Espectador espectador = new Espectador(nombre, edad, dinero);
@@ -51,6 +51,9 @@ public class MainApp {
 		for(int i = 0; i < longitudNombre; i++) {
 			if(i%2==0) {
 				nombre += (char)(Math.random()*26+97);	//Generar letra aleatoria
+				if(i == 0) {
+					nombre.toUpperCase();
+				}
 			} else {
 				vocal = (int) (Math.random()*5);		//generar letra vocal aleatoria
 				switch (vocal) {
