@@ -10,22 +10,18 @@ public class Raices {
 	}
 	
 	public void obtenerRaices() {
-		double raiz = 0;
-		if (tieneRaices()) {
-			raiz = Math.sqrt(getDiscriminante());
-			System.out.println(raiz);
-		}
+		double resultado1, resultado2;
+		resultado1 = -b+Math.sqrt(getDiscriminante()/(2*a));
+		resultado2 = -b-Math.sqrt(getDiscriminante()/(2*a));
+		System.out.println("Solucion 1: "+resultado1);
+		System.out.println("\nSolucion 2: "+resultado2);
 		
 	}
 		
 	public void obtenerRaiz() {
-		double raiz = 0;
-		if (tieneRaiz()) {
-			raiz = Math.sqrt(getDiscriminante());
-			System.out.println(raiz);
-		}else {
-			System.out.println("No tiene raiz");
-		}
+		double resultado1;
+		resultado1 = -b;
+		System.out.println("Solucion: "+resultado1);
 		
 	}
 
