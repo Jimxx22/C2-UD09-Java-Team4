@@ -5,11 +5,12 @@ public abstract class Persona {
 	protected int edad;
 	protected char sexo;
 	protected boolean asistencia;
-	
-	
-	
+		
+	public Persona() {
+		this("",0,'H',false);
+	}
+
 	public Persona(String nombre, int edad, char sexo, boolean asistencia) {
-		super();
 		this.nombre = nombre;
 		this.edad = edad;
 		this.sexo = sexo;
