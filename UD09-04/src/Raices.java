@@ -9,6 +9,14 @@ public class Raices {
 		this.c = c;
 	}
 	
-	
+	public void obtenerRaices() {
+		
+	}
+		
+	public void obtenerRaiz() {
+		if (tieneRaiz) {
+			double raiz = Math.sqrt(getDiscriminante);
+		}
+	}
 
 }
