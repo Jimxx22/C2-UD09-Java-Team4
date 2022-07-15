@@ -36,6 +36,8 @@ public class Raices {
 			resultado2 = -b-Math.sqrt(getDiscriminante()/(2*a));
 			System.out.println("Solucion 1: "+resultado1);
 			System.out.println("\nSolucion 2: "+resultado2);
+		} else {
+			System.out.println("No existe solucion");
 		}
 	}
 
