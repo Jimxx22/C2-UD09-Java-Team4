@@ -6,33 +6,39 @@ public class MainApp {
 	final static int NUM_ESPECTADORES = 30;
 	static int numEspectadores = 0;
 	static Cine cine; 
+	static Pelicula pelicula;
 	
 	public static void main(String[] args) {
 		
 		// Declaramos la película usando el generador aleatorio de nombres para el director
-		Pelicula pelicula = new Pelicula("Avatar 2",200,16,generarNombre()+" "+generarNombre());
+		pelicula = new Pelicula("Avatar 2",200,16,generarNombre()+" "+generarNombre());
 		// construimos el cine con la pelicula atreiormente creada y el precio de la entrada
 		cine = new Cine(pelicula, 8);		
 		
 		// Llamamos la función de generación y validación de los espectadores y los colocamos en un asiento
 		genracionEspectadores();	
 		
+		//Mostrar información
+		mostrarCine();
+
+	}
+	
+	private static void mostrarCine() {
 		//mostramos todos los asientos del cine i su informacion
 		for(int i = 0; i < cine.getAsientos().length; i++) {
 			for (int j = 0; j < cine.getAsientos()[0].length; j++) {
 				System.out.println(cine.getAsientos()[i][j].toString());
 			}
 		}
-		
+				
 		// Mostramos la película que se va a proyectar
 		System.out.println("\nPelicula: "+pelicula.toString());
-		
+				
 		// Mostramos quantos espectadores han entrado 
 		System.out.println("Numero de espectadores: "+numEspectadores);
-
 	}
 	
-	public static void genracionEspectadores() {
+	private static void genracionEspectadores() {
 		
 		// Generamos los espectadores
 		for (int i = 0; i < NUM_ESPECTADORES; i++) {
