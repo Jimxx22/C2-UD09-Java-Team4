@@ -26,10 +26,16 @@ public class Raices {
 	}
 	
 	public void calcular() {
+		double resultado1, resultado2;
+		
 		if(tieneRaiz()) {
-			
+			resultado1 = -b;
+			System.out.println("Solucion: "+resultado1);
 		} else if (tieneRaices()) {
-			
+			resultado1 = -b+Math.sqrt(getDiscriminante()/(2*a));
+			resultado2 = -b-Math.sqrt(getDiscriminante()/(2*a));
+			System.out.println("Solucion 1: "+resultado1);
+			System.out.println("\nSolucion 2: "+resultado2);
 		}
 	}
 
