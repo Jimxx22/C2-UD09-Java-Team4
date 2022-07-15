@@ -16,6 +16,14 @@ public class Raices {
 			return false;
 		}
 	}
+		
+	public double getDiscriminante() {
+		Double res;
+		
+		res=(Math.pow(b, 2))-4*a*c;
+		
+		return res;
+	}
 	
 	public void calcular() {
 		if(tieneRaiz()) {
@@ -25,4 +33,12 @@ public class Raices {
 		}
 	}
 
+	public boolean tieneRaices() {
+		
+		if(getDiscriminante()>=0) {
+			return true;
+		}else {
+			return false;
+		}
+	}
 }
