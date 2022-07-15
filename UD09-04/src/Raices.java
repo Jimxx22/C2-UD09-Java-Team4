@@ -13,13 +13,18 @@ public class Raices {
 		double raiz = 0;
 		if (tieneRaices()) {
 			raiz = Math.sqrt(getDiscriminante());
+			System.out.println(raiz);
 		}
-		System.out.println(raiz);
+		
 	}
 		
 	public void obtenerRaiz() {
-		if (tieneRaiz) {
-			double raiz = Math.sqrt(getDiscriminante());
+		double raiz = 0;
+		if (tieneRaiz()) {
+			raiz = Math.sqrt(getDiscriminante());
+			System.out.println(raiz);
+		}else {
+			System.out.println("No tiene raiz");
 		}
 		
 	}
