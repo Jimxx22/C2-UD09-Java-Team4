@@ -7,7 +7,7 @@ public abstract class Persona {
 	protected boolean asistencia;
 		
 	public Persona() {
-		this("",0,'H',false);
+		this("",0,'H',true);
 	}
 
 	public Persona(String nombre, int edad, char sexo, boolean asistencia) {
