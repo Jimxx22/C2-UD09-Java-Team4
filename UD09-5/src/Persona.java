@@ -1,15 +1,18 @@
 
 public abstract class Persona {
 
+	// Variables
 	protected String nombre;
 	protected int edad;
 	protected char sexo;
 	protected boolean asistencia;
 		
+	// Constructor por defecto
 	public Persona() {
 		this("",0,'H',true);
 	}
 
+	// Construcor con todos los campos
 	public Persona(String nombre, int edad, char sexo, boolean asistencia) {
 		this.nombre = nombre;
 		this.edad = edad;
@@ -17,6 +20,7 @@ public abstract class Persona {
 		this.asistencia = asistencia;
 	}
 
+	// Geters y seters
 	public String getNombre() {
 		return nombre;
 	}
@@ -49,11 +53,13 @@ public abstract class Persona {
 		this.asistencia = asistencia;
 	}
 	
+	// Método toString
 	@Override
 	public String toString() {
 		return "Persona [nombre=" + nombre + ", edad=" + edad + ", sexo=" + sexo + ", asistencia=" + asistencia + "]";
 	}
 
+	// Método abstracto para que desarrollen las clases que hereden
 	public abstract void novillos();
 	
 }

@@ -1,13 +1,17 @@
 
 public class Profesor extends Persona{
+	// La clase Profesor hereda de la clase Persona
+	
+	// Variables
 	private String materia;
 	
-	
+	// Constructor por defecto
 	public Profesor() {
 		super();
 		this.materia = "";
 	}
 
+	// Constructor con todos los parámetros, propios y heredados
 	public Profesor(String nombre, int edad, char sexo, String materia) {
 		super(nombre, edad, sexo, true);
 		if (validarMateria(materia)) {
@@ -17,9 +21,8 @@ public class Profesor extends Persona{
 		}
 		novillos();
 	}
-
-
-
+	
+	// Método para validar que la materia está dentro de los parámetros
 	private boolean validarMateria (String materia) {
 		String [] materias = {"matematicas","filosofia","fisica"};
 		int i = 0;
@@ -33,6 +36,7 @@ public class Profesor extends Persona{
 		return valido;
 	}
 
+	// Getres y seters
 	public String getMateria() {
 		return materia;
 	}
@@ -41,11 +45,13 @@ public class Profesor extends Persona{
 		this.materia = materia;
 	}
 
+	// Método toString
 	@Override
 	public String toString() {
 		return "Profesor ["+super.toString()+"materia=" + materia + "]";
 	}
 
+	// Método heredado de la clase Persona para calcular si el profesor hará novillos
 	@Override
 	public void novillos() {
 		// TODO Auto-generated method stub
