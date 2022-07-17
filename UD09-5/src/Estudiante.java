@@ -1,15 +1,18 @@
 
 public class Estudiante extends Persona{
+	//La clase Estudiante hereda de la clase Presona
 	
+	// Variables
 	private double calificacion;
-	private boolean aprovado;
 	
+	// Constructor con parámetros de estudiante y parámetros heredados de la clase Persona
 	public Estudiante(String nombre, int edad, char sexo, double calificacion) {
 		super(nombre, edad, sexo, true);
 		this.calificacion = calificacion;
 		novillos();
 	}
 
+	// Método heredado de la clase Persona para calcular si el estudiante hará novillos
 	@Override
 	public void novillos() {
 		double prob = Math.random();
@@ -30,6 +33,7 @@ public class Estudiante extends Persona{
 		}
 	}
 
+	// Método toString
 	@Override
 	public String toString() {
 		return "\nEstudiante ["+super.toString()+"calificacion=" + calificacion + "]";

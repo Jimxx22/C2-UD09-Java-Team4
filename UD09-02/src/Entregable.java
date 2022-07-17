@@ -1,6 +1,8 @@
 
 public interface Entregable {
+	// Interfaz para implementar a las clases
 	
+	// Métodos para implementar a las clases
 	public void entregar();
 	
 	public void devolver();
