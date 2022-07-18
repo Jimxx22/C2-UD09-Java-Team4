@@ -19,7 +19,6 @@ public class Espectador {
 
 	// Constructor con todos los parámetros
 	public Espectador(String nombre, int edad, Double dinero) {
-		super();
 		this.nombre = nombre;
 		this.edad = edad;
 		this.dinero = dinero;
